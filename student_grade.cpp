@@ -16,7 +16,7 @@ int main() {
 
     do {
         cout << "Enter student name: ";
-        cin >> name;
+        getline(cin,name);
         studentNames.push_back(name);
 
         cout << "Enter student grade: ";
@@ -25,6 +25,7 @@ int main() {
 
         cout << "Do you want to enter more students? (Y/N): ";
         cin >> moreStudents;
+        cin.ignore();
     } while (moreStudents == 'Y' || moreStudents == 'y');
 
     
